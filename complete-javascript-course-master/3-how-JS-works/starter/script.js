@@ -2,7 +2,7 @@
 // Lecture: Hoisting
 
 //calculateAge(1939);
-function calculateAge(year) {
+/*function calculateAge(year) {
     console.log(2020 - year);
 }
 
@@ -14,14 +14,14 @@ var retirement = function(year) {
 //retirement(1990);
 var age = 23;
 function foo() {
-    console.log(window.age);
+   // console.log(window.age);
     var age = 65;
     window.age = 21;
-    console.log(age);
+   // console.log(age);
 }
 foo();
-console.log(age);
-
+//console.log(age);
+*/
 
 
 ///////////////////////////////////////
@@ -74,11 +74,30 @@ function third() {
 ///////////////////////////////////////
 // Lecture: The this keyword
 
+//calling this refers to the object that is calling 'this'
+//and is dependent on which object scope it is in when 
+//it is called
 
+//console.log(this);
+/*
+calculateAge(1985);
+function calculateAge(year) {
+    console.log(2020 - year);
+    console.log(this);
+}
+*/
+var person = {
+    name: 'John',
+    yearOfBirth: 1996,
+    personInfo: function() {
+        console.log(this);
+    }
+}
 
+person.personInfo();
 
-
-
-
+var mike = {
+    
+}
 
 
